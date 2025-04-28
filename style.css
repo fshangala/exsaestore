@@ -21,11 +21,21 @@
   --accent-color: #e74c3c;
   --background-color: #f4f4f4;
   --text-color: #333;
+  --success: #28a745;
+  --error: #dc3545;
+  --warning: #ffc107;
+  --info: #17a2b8;
+  --light: #f8f9fa;
+  --dark: #343a40;
+  --white: #fff;
+  --black: #000;
+  --gray: #6c757d;
+  --primary-gradient: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  --secondary-gradient: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%);
+
   --font-family: 'Arial', sans-serif;
   --font-size-base: 16px;
   --line-height-base: 1.5;
-  --primary-gradient: linear-gradient(135deg, #3498db 0%, #2ecc71 100%);
-  --secondary-gradient: linear-gradient(135deg, #2ecc71 0%, #e74c3c 100%);
   --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   --box-shadow-hover: 0 4px 8px rgba(0, 0, 0, 0.2);
   --border-radius: 5px;
@@ -37,6 +47,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  transition: var(--transition);
 }
 html {
   font-size: var(--font-size-base);
@@ -69,10 +80,13 @@ p {
 .w-full {
   width: 100%;
 }
+.w-100 {
+  width: 100%;
+}
 
 /* Flex */
 .flex {
-  display: flex;;
+  display: flex;
 }
 .flex-row {
   flex-direction: row;
@@ -98,6 +112,15 @@ p {
 }
 .flex-shrink-0 {
   flex-shrink: 0;
+}
+.gap-1 {
+  gap: 0.5rem;
+}
+.gap-2 {
+  gap: 1rem;
+}
+.justify-content-center {
+  justify-content: center;
 }
 
 /* Header Styles */
@@ -128,7 +151,6 @@ header nav ul li a {
   font-size: 1rem;
   padding: 0.5rem 1rem;
   border-radius: 5px;
-  transition: background-color 0.3s ease;
 }
 header nav ul li a:hover {
   background-color: #444;
@@ -155,11 +177,29 @@ header nav ul li a:hover {
   background-color: var(--secondary-color);
   box-shadow: var(--box-shadow-hover);
 }
+
 .btn-secondary {
   background-color: var(--secondary-color);
   color: #fff;
 }
 .btn-secondary:hover {
   background-color: var(--primary-color);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn-danger {
+  background-color: var(--error);
+  color: #fff;
+}
+.btn-danger:hover {
+  background-color: var(--warning);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn-success {
+  background-color: var(--success);
+  color: #fff;
+}
+.btn-success:hover {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
