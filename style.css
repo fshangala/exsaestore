@@ -83,6 +83,21 @@ p {
 .w-100 {
   width: 100%;
 }
+.w-240px {
+  width: 240px;
+}
+.p-1 {
+  padding: 0.5rem;
+}
+.p-2 {
+  padding: 1rem;
+}
+.p-3 {
+  padding: 1.5rem;
+}
+.p-4 {
+  padding: 2rem;
+}
 
 /* Flex */
 .flex {
@@ -121,6 +136,11 @@ p {
 }
 .justify-content-center {
   justify-content: center;
+}
+
+/* Font */
+.text-center {
+  text-align: center;
 }
 
 /* Header Styles */
